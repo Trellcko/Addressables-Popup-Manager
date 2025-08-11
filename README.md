@@ -52,7 +52,7 @@ public class Test : MonoBehaviour
     {
         try
         {
-            await _popupManager.ShowPopupAsync<Popup>(_path[_index], _showPopupLogic);
+            await _popupManager.ShowPopupAsync<Popup>(_path[_index], ShowPopupLogic.Stack);
         }
         catch (Exception e)
         {
