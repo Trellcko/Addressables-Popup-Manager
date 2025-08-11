@@ -26,6 +26,8 @@ If needed, install manually:
 3. Paste the repository URL:
 
 ## 🚀 Usage
+P.S For [Button] attributes use Naughty Attributes
+
 ```csharp
 public class Test : MonoBehaviour
 {
