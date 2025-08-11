@@ -23,4 +23,53 @@ If needed, install manually:
 ### 3️⃣ Install via Unity Package Manager  
 1. Open **Unity** → `Window > Package Manager`  
 2. Click the **`+`** button → **Add package from git URL**  
-3. Paste the repository URL:  
+3. Paste the repository URL:
+
+## 🚀 Usage
+```csharp
+public class Test : MonoBehaviour
+{
+    [SerializeField] private Canvas _canvas;
+    [SerializeField] private string[] _path;
+    [SerializeField] private int _index;
+    [SerializeField] private ShowPopupLogic _showPopupLogic;
+    private PopupManager _popupManager;
+
+    private void Start()
+    {
+        InitPopupManager();
+    }
+
+    private void InitPopupManager()
+    {
+        _popupManager = new(new AssetManagement());
+
+        _popupManager.SetCanvas(_canvas);
+    }
+
+    [Button]
+    private async void Show()
+    {
+        try
+        {
+            await _popupManager.ShowPopupAsync<Popup>(_path[_index], _showPopupLogic);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e.Message + "\n" + e.StackTrace);
+        }
+    }
+
+    [Button]
+    private void Hide()
+    {
+        _popupManager.HidePopup(_path[_index], HidePopupLogic.Hide);
+    }
+
+    [Button]
+    private void Destroy()
+    {
+        _popupManager.HidePopup(_path[_index], HidePopupLogic.Destroy);
+    }
+}
+```
