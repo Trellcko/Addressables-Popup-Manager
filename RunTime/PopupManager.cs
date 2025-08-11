@@ -107,7 +107,7 @@ namespace Trell.AddressablesPopupManager
                     if (_currentPopup)
                     {
                         _currentPopup.Hide();
-                        _popupsOrder.Add(_currentPopup);
+                        _popupsOrder.Insert(0, _currentPopup);
                     }
                     ChangeCurrentPopupToNew();
                     
@@ -174,4 +174,5 @@ namespace Trell.AddressablesPopupManager
             return false;
         }
     }
+
 }
