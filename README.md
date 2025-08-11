@@ -3,7 +3,7 @@
 An **async Popup Manager** for Unity that uses **Addressables** + **UniTask** to load and manage popups efficiently.  
 
 ## ✨ Features
-- Asynchronous popup loading and unloading  
+- Asynchronous popup loading  
 - **Addressables** integration for asset management  
 - **UniTask** for high-performance async/await  
 - Simple API for showing and hiding popups  
