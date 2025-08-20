@@ -26,7 +26,11 @@ If needed, install manually:
 3. Paste the repository URL:
 
 ## 🚀 Usage
-P.S.: For [Button] attribute uses Naughty Attributes
+To use the PopupManager in your own scripts, you must reference its assembly definition.
+
+In your project, create an .asmdef file (if you don't already have one).
+In the Inspector, add a reference to the com.trellcko.popupmanager assembly.
+You can now use the package's namespaces in your code:
 
 ```csharp
 public class Test : MonoBehaviour
